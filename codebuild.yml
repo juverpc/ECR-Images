@@ -12,6 +12,7 @@ phases:
     commands:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${ECR_URL}
       - chmod +x tag.sh
+      - chmod +x push_ecr.sh
   build:  
     commands:
       - docker-compose build
@@ -22,7 +23,8 @@ phases:
      
   post_build:
     commands:
-      - docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE1}
-      - docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE2}
+      - ./push_ecr.sh
+      #- docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE1}
+      #- docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE2}
 
 
