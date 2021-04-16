@@ -16,7 +16,7 @@ phases:
   build:  
     commands:
       - docker-compose build
-      - docker tag demo:latest 624733648801.dkr.ecr.us-east-1.amazonaws.com/sagemaker-safety-image:latest
+      - docker tag sagemaker-safety-image:latest 624733648801.dkr.ecr.us-east-1.amazonaws.com/sagemaker-safety-image:latest
       #- docker tag ${ECR_REPO_NAME}:latest ${ECR_URL}/${ECR_REPO_NAME}:$latest
   post_build:
     commands:
