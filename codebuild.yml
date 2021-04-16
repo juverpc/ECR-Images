@@ -20,5 +20,5 @@ phases:
       #- docker tag ${ECR_REPO_NAME}:latest ${ECR_URL}/${ECR_REPO_NAME}:$latest
   post_build:
     commands:
-      - docker push ${ECR_URL}/${ECR_REPO_NAME}:latest
+      - docker push ${ECR_URL}/sagemaker-safety-image:latest
 
