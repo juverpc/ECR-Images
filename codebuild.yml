@@ -17,11 +17,11 @@ phases:
     commands:
       - docker-compose build
       - docker tag demo:sagemaker-safety-image 624733648801.dkr.ecr.us-east-1.amazonaws.com/demo:sagemaker-safety-image
-      - docker tag demo:sagemaker-fnb-image 624733648801.dkr.ecr.us-east-1.amazonaws.com/demo:sagemaker-fnb-image
+      #- docker tag demo:sagemaker-fnb-image 624733648801.dkr.ecr.us-east-1.amazonaws.com/demo:sagemaker-fnb-image
       #- docker tag ${ECR_REPO_NAME}:latest ${ECR_URL}/${ECR_REPO_NAME}:$latest
   post_build:
     commands:
       - docker push ${ECR_URL}/demo:sagemaker-safety-image
-      - docker push ${ECR_URL}/demo:sagemaker-fnb-image
+      #- docker push ${ECR_URL}/demo:sagemaker-fnb-image
 
 
