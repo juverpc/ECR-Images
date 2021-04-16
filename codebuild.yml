@@ -2,11 +2,8 @@ version: 0.2
 
 env:
   variables:
-    #ECR_URL: 624733648801.dkr.ecr.us-east-1.amazonaws.com
     ECR_REPO_NAME: demo
-    #TAG_IMAGE1: sagemaker-safety-image
-    #TAG_IMAGE2: sagemaker-fnb-image
-
+    
 phases:
   pre_build:
     commands:
@@ -18,13 +15,10 @@ phases:
       - docker-compose build
       - ./tag.sh
       - docker images | grep demo
-      #- docker tag ${ECR_REPO_NAME}:${TAG_IMAGE1} ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE1}
-      #- docker tag ${ECR_REPO_NAME}:${TAG_IMAGE2} ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE2}
-     
+         
   post_build:
     commands:
       - ./push_ecr.sh
-      #- docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE1}
-      #- docker push ${ECR_URL}/${ECR_REPO_NAME}:${TAG_IMAGE2}
+   
 
 
