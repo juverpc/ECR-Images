@@ -1,0 +1,11 @@
+version: '3'
+services:
+  
+  safety:
+    image: sagemaker-safety-image
+    build: ./safety
+  
+  fnb:
+    image: sagemaker-fnb-image
+    build: ./FNB
+    
