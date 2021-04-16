@@ -1,9 +1,6 @@
 version: 0.2
 
-env:
-  variables:
-    ECR_REPO_NAME: demo
-    
+   
 phases:
   pre_build:
     commands:
