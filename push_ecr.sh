@@ -7,5 +7,5 @@
 # do
 # docker push ${ECR_URL}/${ECR_REPO_NAME}:${i}
 # done
-#docker push ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-safety-image
+docker push ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-safety-image
 docker push ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-fnb-image

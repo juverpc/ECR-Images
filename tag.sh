@@ -8,5 +8,5 @@
 # do
 # docker tag ${ECR_REPO_NAME}:${i} ${ECR_URL}/${ECR_REPO_NAME}:${i}
 # done
-#docker tag ${ECR_REPO_NAME}:sagemaker-safety-image ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-safety-image
+docker tag ${ECR_REPO_NAME}:sagemaker-safety-image ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-safety-image
 docker tag ${ECR_REPO_NAME}:sagemaker-fnb-image ${ECR_URL}/${ECR_REPO_NAME}:sagemaker-fnb-image

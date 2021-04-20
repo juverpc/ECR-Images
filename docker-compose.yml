@@ -1,9 +1,9 @@
 version: '3'
 services:
   
-  # safety:
-  #   image: demo:sagemaker-safety-image
-  #   build: ./safety
+  safety:
+    image: demo:sagemaker-safety-image
+    build: ./safety
   
   fnb:
     image: demo:sagemaker-fnb-image
