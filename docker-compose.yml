@@ -5,7 +5,7 @@ services:
     image: demo:sagemaker-safety-image
     build: ./safety
   
-  fnb:
-    image: demo:sagemaker-fnb-image
-    build: ./FNB
+  # fnb:
+  #   image: demo:sagemaker-fnb-image
+  #   build: ./FNB
     
