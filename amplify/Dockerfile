@@ -1,6 +1,6 @@
 # Use the standard Amazon Linux base, provided by ECR/KaOS
 # It points to the standard shared Amazon Linux image, with a versioned tag.
-FROM 137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:2
+FROM public.ecr.aws/amazonlinux/amazonlinux:2.0.20210701.0-arm64v8
 
 
 # Framework Versions
