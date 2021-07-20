@@ -22,7 +22,7 @@ ENV LANG=en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 ## Install OS packages
-RUN touch ~/.bashrc
+#RUN touch ~/.bashrc
 RUN yum -y update && \
     yum -y install \
         alsa-lib-devel \
